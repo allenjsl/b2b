@@ -1,0 +1,217 @@
+﻿<%@ Master Language="C#" AutoEventWireup="true" CodeBehind="DanJu.master.cs" Inherits="EyouSoft.PtWeb.MP.DanJu" %>
+
+
+<!DOCTYPE html PUBLIC "-//W3C//DTD XHTML 1.0 Transitional//EN" "http://www.w3.org/TR/xhtml1/DTD/xhtml1-transitional.dtd">
+<html xmlns="http://www.w3.org/1999/xhtml">
+<head id="Head1" runat="server">
+    <title>
+        <%=ITitle %>-<%=CompanyName %>-打印</title>
+    <link href="/css/print.css" rel="stylesheet" type="text/css" />
+    <script src="/js/jquery-1.4.4.js" type="text/javascript"></script>
+
+    <style type="text/css">
+        .PrintPreview{display: none;}
+        #divContent table,#divHeader table,#divFooter table,#tab_Operate {width:<%=PrintPageWidth%>px;}
+    </style>
+    <asp:ContentPlaceHolder ID="PageHead" runat="server">
+    </asp:ContentPlaceHolder>
+</head>
+<body>
+    <form id="form1" runat="server">
+    <table id="tab_Operate" border="0" align="center" cellpadding="0" cellspacing="0">
+        <tr>
+            <td width="560px">
+                <input id="chk_HideHeader" name="chk_HideHeader" type="checkbox" onclick="PrintMaster.HiddenImgCachet(this,'divHeader');" /><label
+                    for="chk_HideHeader" style="cursor: pointer;">隐藏页眉</label>&nbsp;
+                <input id="chk_HideFooter" name="chk_HideFooter" type="checkbox" onclick="PrintMaster.HiddenImgCachet(this,'divFooter');" /><label
+                    for="chk_HideFooter" style="cursor: pointer;">隐藏页脚</label>&nbsp;
+                <input id="chk_hideTable" name="chk_HideFooter" type="checkbox" onclick="PrintMaster.HiddenTable();" /><label
+                    for="chk_hideTable" style="cursor: pointer;">隐藏表格</label>&nbsp;
+                行间距：<a href="javascript:void(0)"
+                        onclick="PrintMaster.SetLineHeight(true)">+加大</a> <a href="javascript:void(0)" onclick="PrintMaster.SetLineHeight(false)">
+                            -减小</a>&nbsp; 字体：<a href="javascript:void(0)" onclick="PrintMaster.SetFontSize(true)">+加大</a>
+                <a href="javascript:void(0)" onclick="PrintMaster.SetFontSize(false)">-减小</a>&nbsp;
+            </td>
+            <td align="right">
+                <asp:ImageButton ID="ibtnPrintPage" runat="server" ImageUrl="/images/danju/dayin-xz.gif"
+                    Width="57" Height="19" CssClass="hand" OnClientClick="PrintMaster.PrintPage();return false;" />&nbsp;
+                <asp:ImageButton ID="ibtnWord" Width="57" Height="19" runat="server" ImageUrl="/images/danju/daochu-xz.gif"
+                    CssClass="hand" OnClientClick="ReplaceInput()" OnClick="ibtnWord_Click" />
+            </td>
+        </tr>
+    </table>
+    <div id="divAllHtml" style="width: <%=PrintPageWidth%>px; margin: 0 auto;">
+        <div id="divHeader">
+            <asp:ContentPlaceHolder ID="PageYeMei" runat="server">
+            </asp:ContentPlaceHolder>            
+        </div>
+        <div id="divContent">
+            <asp:ContentPlaceHolder ID="PageMain" runat="server">
+            </asp:ContentPlaceHolder>
+        </div>
+        <div id="divFooter">
+            <asp:ContentPlaceHolder ID="PageYeJiao" runat="server">
+            </asp:ContentPlaceHolder>            
+        </div>
+    </div>
+    <div id="printNone" style="display: none;">
+    </div>
+    <input id="hidPrintHTML" name="hidPrintHTML" type="hidden" />
+    <input id="hideFontSize" type="hidden" value="13" />
+    <input id="hideLineHeight" type="hidden" value="16" />
+
+    <script type="text/javascript">
+        var PrintMaster = {
+            HiddenImgCachet: function(Obj, DivID) {
+                if ($(Obj).attr("checked") == true) {
+                    $("#" + DivID).hide();
+                } else {
+                    $("#" + DivID).show();
+                }
+            },
+            PrintPage: function() {//打印
+                if (window.print != null) {
+                    if (window["PrevFun"] != null) {
+                        window["PrevFun"]();
+                    }
+
+                    $("#tab_Operate").hide();
+                    if ($("#chk_hideTable").attr("checked")) {
+                        PrintMaster.SetTableClass("1");
+                    }
+                    $(".unprint").hide();
+                    window.print();
+
+                    //还原页面内容
+                    window.setTimeout(function() {
+                        $("#tab_Operate").show();
+                        if ($("#chk_hideTable").attr("checked")) {
+                            PrintMaster.SetTableClass("1");
+                        }
+                        $(".unprint").show();
+                    }, 1000);
+
+                } else {
+                    alert("没有安装打印机");
+                }
+            },
+            AdaptiveHeight: function(tableId) {
+                if (tableId === undefined || typeof (tableId) != "string") {
+                    alert("请使用有效的参数");
+                    return;
+                }
+
+                var oTable = $("#" + tableId);
+                if (oTable.length == 0) {
+                    return;
+                }
+
+                var oParent = oTable.parent("td").parent("tr");
+                if (oParent.length == 0) {
+                    return;
+                }
+
+                var parentHeight = oParent.height();
+                var oTableHeight = oTable.height();
+                if (parentHeight > oTableHeight) {
+                    oTable.height(parentHeight + 10);
+                }
+            },
+            config: {
+                minFontSize: 10,
+                maxFontSize: 20,
+                minLineHeight: 12,
+                maxLineHeight: 30
+            },
+            SetFontSize: function(isIncrease) {
+                var currentFontSize = parseInt($("#hideFontSize").val());
+                var toFontSize = isIncrease ? currentFontSize + 1 : currentFontSize - 1;
+
+                if (!isIncrease && toFontSize < this.config.minFontSize) {
+                    alert("已调整至最小字体" + this.config.minFontSize + "像素");
+                    return;
+                }
+
+                if (isIncrease && toFontSize > this.config.maxFontSize) {
+                    alert("已调整至最大字体" + this.config.maxFontSize + "像素");
+                    return;
+                }
+
+                $("#divContent td").css({ 'font-size': toFontSize + 'px' });
+                $("#hideFontSize").val(toFontSize);
+            },
+            SetLineHeight: function(isIncrease) {
+                var lineHeight = parseInt($("#hideLineHeight").val());
+                var toLineHeight = isIncrease ? lineHeight + 1 : lineHeight - 1;
+
+                if (!isIncrease && toLineHeight < this.config.minLineHeight) {
+                    alert("最小行间距" + this.config.minLineHeight + "像素");
+                    return;
+                }
+
+                if (isIncrease && toLineHeight > this.config.maxLineHeight) {
+                    alert("最大行间距" + this.config.maxLineHeight + "像素");
+                    return;
+                }
+
+                $("body").css({ 'line-height': toLineHeight + 'px' });
+                $("#hideLineHeight").val(toLineHeight);
+            },
+            HiddenTable: function() {
+                if ($("#chk_hideTable").attr("checked")) {
+                    PrintMaster.SetTableClass("1");
+                } else {
+                    PrintMaster.SetTableClass("");
+                }
+            },
+            SetTableClass: function(type) {
+                $("#divContent").find("table").each(function() {
+                    var _self = $(this);
+                    if (_self.attr("class") != "") {
+                        var className = "list" + type;
+                        _self.attr("class", className);
+                    }
+                })
+            },
+            //打印选择事件，chkExpr：chk选择器，shExpr：需要隐藏内容的选择器
+            bindChkClick: function(chkExpr, shExpr) {
+                $(chkExpr).bind("click", function() {
+                    var _$chkTable = $(chkExpr).closest("table");
+                    if ($(this).attr("checked")) {
+                        _$chkTable.removeClass("unprint")
+                        $(shExpr).show();
+                    }
+                    else {
+                        _$chkTable.addClass("unprint");
+                        $(shExpr).hide();
+                    }
+                });
+            }
+        };
+        function ReplaceInput() {
+            if (window["PrevFun"] != null) window["PrevFun"]();
+            
+            $("#divHeader").attr("ref", "noprint");
+            $("#divFooter").attr("ref", "noprint");
+            $("#printNone").html($("#divAllHtml").html());
+            $("#printNone").find("div[ref='noprint'],[type='hidden']").replaceWith("");
+            $("#printNone").find("input[type='checkbox']").replaceWith("");
+            $("#printNone input,textarea").each(function() {
+                var values = $(this).val().replace(/\n/g, "<br/>");
+                $(this).before("<span class='input " + $(this).attr("class") + "'>" + values + "</span>");
+                $(this).replaceWith("");
+            });
+            $("#printNone").find(".unprint").replaceWith("");
+            $("#printNone").find(".undaochu").replaceWith("");
+
+            $("#printNone").find("table").removeClass("i_yinhangzhanghao");
+
+            $("#hidPrintHTML").val($("#printNone").html());
+        }
+
+    </script>
+
+    </form>
+</body>
+</html>
+

@@ -1,0 +1,138 @@
+﻿<?xml version="1.0" encoding="utf-8"?>
+<Project ToolsVersion="3.5" DefaultTargets="Build" xmlns="http://schemas.microsoft.com/developer/msbuild/2003">
+  <PropertyGroup>
+    <Configuration Condition=" '$(Configuration)' == '' ">Debug</Configuration>
+    <Platform Condition=" '$(Platform)' == '' ">AnyCPU</Platform>
+    <ProductVersion>9.0.30729</ProductVersion>
+    <SchemaVersion>2.0</SchemaVersion>
+    <ProjectGuid>{BDD06D88-6827-4F20-8041-0BAC21F3FD92}</ProjectGuid>
+    <OutputType>Library</OutputType>
+    <AppDesignerFolder>Properties</AppDesignerFolder>
+    <RootNamespace>EyouSoft.Document</RootNamespace>
+    <AssemblyName>EyouSoft.Document</AssemblyName>
+    <TargetFrameworkVersion>v3.5</TargetFrameworkVersion>
+    <FileAlignment>512</FileAlignment>
+    <SccProjectName>SAK</SccProjectName>
+    <SccLocalPath>SAK</SccLocalPath>
+    <SccAuxPath>SAK</SccAuxPath>
+    <SccProvider>SAK</SccProvider>
+  </PropertyGroup>
+  <PropertyGroup Condition=" '$(Configuration)|$(Platform)' == 'Debug|AnyCPU' ">
+    <DebugSymbols>true</DebugSymbols>
+    <DebugType>full</DebugType>
+    <Optimize>false</Optimize>
+    <OutputPath>bin\Debug\</OutputPath>
+    <DefineConstants>DEBUG;TRACE</DefineConstants>
+    <ErrorReport>prompt</ErrorReport>
+    <WarningLevel>4</WarningLevel>
+  </PropertyGroup>
+  <PropertyGroup Condition=" '$(Configuration)|$(Platform)' == 'Release|AnyCPU' ">
+    <DebugType>pdbonly</DebugType>
+    <Optimize>true</Optimize>
+    <OutputPath>bin\Release\</OutputPath>
+    <DefineConstants>TRACE</DefineConstants>
+    <ErrorReport>prompt</ErrorReport>
+    <WarningLevel>4</WarningLevel>
+  </PropertyGroup>
+  <ItemGroup>
+    <Reference Include="System" />
+    <Reference Include="System.Core">
+      <RequiredTargetFramework>3.5</RequiredTargetFramework>
+    </Reference>
+    <Reference Include="System.Xml.Linq">
+      <RequiredTargetFramework>3.5</RequiredTargetFramework>
+    </Reference>
+    <Reference Include="System.Data.DataSetExtensions">
+      <RequiredTargetFramework>3.5</RequiredTargetFramework>
+    </Reference>
+    <Reference Include="System.Data" />
+    <Reference Include="System.Xml" />
+  </ItemGroup>
+  <ItemGroup>
+    <Compile Include="Properties\AssemblyInfo.cs" />
+  </ItemGroup>
+  <ItemGroup>
+    <Content Include="lib\Adpost.Common.Office.dll" />
+    <Content Include="lib\AntiXSSLibrary.dll" />
+    <Content Include="lib\Elmah.dll" />
+    <Content Include="lib\ICSharpCode.SharpZipLib.dll" />
+    <Content Include="lib\log4net.dll" />
+    <Content Include="lib\Memcached.ClientLibrary.dll" />
+    <Content Include="lib\Microsoft.Office.Interop.Excel.dll" />
+    <Content Include="lib\Microsoft.Office.Interop.Word.dll" />
+    <Content Include="lib\Microsoft.Practices.EnterpriseLibrary.Caching.dll" />
+    <Content Include="lib\Microsoft.Practices.EnterpriseLibrary.Caching.xml" />
+    <Content Include="lib\Microsoft.Practices.EnterpriseLibrary.Common.dll" />
+    <Content Include="lib\Microsoft.Practices.EnterpriseLibrary.Common.xml" />
+    <Content Include="lib\Microsoft.Practices.EnterpriseLibrary.Data.dll" />
+    <Content Include="lib\Microsoft.Practices.EnterpriseLibrary.Data.xml" />
+    <Content Include="lib\Microsoft.Practices.EnterpriseLibrary.ExceptionHandling.dll" />
+    <Content Include="lib\Microsoft.Practices.EnterpriseLibrary.ExceptionHandling.xml" />
+    <Content Include="lib\Microsoft.Practices.ObjectBuilder2.dll" />
+    <Content Include="lib\Microsoft.Practices.Unity.Configuration.dll" />
+    <Content Include="lib\Microsoft.Practices.Unity.dll" />
+    <Content Include="lib\Microsoft.Practices.Unity.Interception.dll" />
+    <Content Include="lib\Newtonsoft.Json.dll" />
+    <Content Include="lib\Newtonsoft.Json.xml" />
+    <Content Include="PD\温州壹佰.pdb" />
+    <Content Include="开发规范\底层开发规范.txt" />
+  </ItemGroup>
+  <ItemGroup>
+    <None Include="201406\yibai.201406250001.开发说明.docx" />
+    <None Include="201406\催款单-样本.doc" />
+    <None Include="201406\原始需求\yibai.doc" />
+    <None Include="201406\原始需求\商家大全.doc" />
+    <None Include="201406\原始需求\新用户注册 .doc" />
+    <None Include="201406\原始需求\积分.doc" />
+    <None Include="201406\新名片.CDR" />
+    <None Include="201406\旅行社办公管理软件项目二期合同附件-商家大全.doc" />
+    <None Include="201406\旅行社办公管理软件项目二期合同附件-新用户注册 .doc" />
+    <None Include="201406\旅行社办公管理软件项目二期合同附件-积分.doc" />
+    <None Include="201406\旅行社办公管理软件项目二期合同附件.doc" />
+    <None Include="201406\杭州易诺项目开发合同温州壹佰.doc" />
+    <None Include="lib\jquery-1.11.1.rar" />
+    <None Include="lib\jquery-ui.1.11.1.rar" />
+    <None Include="lib\requirejs.2.1.14.rar" />
+    <None Include="lib\ueditor1_4_3-utf8-net.zip" />
+    <None Include="lib\uploadify.3.2.1.zip" />
+    <None Include="PD\温州壹佰.pdm" />
+    <None Include="数据库日志\yibai.taizhou.jg.sql" />
+    <None Include="数据库日志\yibai.taizhou.pc.gys.kehu.sql" />
+    <None Include="数据库日志\一级栏目.sql" />
+    <None Include="数据库日志\二期开发升级日志\2qikaifa.daoru.taizhou.kehu.gys.sql" />
+    <None Include="数据库日志\二期开发升级日志\2qikaifa.proc.view.fn.drop.sql" />
+    <None Include="数据库日志\二期开发升级日志\2qikaifa.elmah.sql" />
+    <None Include="数据库日志\二期开发升级日志\2qikaifa.jiegou.sql" />
+    <None Include="数据库日志\二期开发升级日志\2qikaifa.privs.sql" />
+    <None Include="数据库日志\二期开发升级日志\2qikaifa.proc.view.fn.create.sql" />
+    <None Include="数据库日志\二期开发升级日志\2qikaifa.xinbiao.sql" />
+    <None Include="数据库日志\二级栏目.sql" />
+    <None Include="数据库日志\城市.sql" />
+    <None Include="数据库日志\数据清理.sql" />
+    <None Include="数据库日志\日志.sql" />
+    <None Include="数据库日志\明细权限.sql" />
+    <None Include="数据库日志\省份.sql" />
+    <None Include="目录说明\Web目录文档.doc" />
+    <None Include="策划文档\%2820121022%29温州市壹百旅行社管理系统功能描述.doc" />
+    <None Include="策划文档\%2820121026%29温州市壹百旅行社管理系统-系统模块.mmap" />
+    <None Include="策划文档\%2820121026%29温州市壹百旅行社管理系统-详细设计.mmap" />
+    <None Include="策划文档\%2820121026%29温州市壹百旅行社管理系统详细设计说明书.doc" />
+    <None Include="策划文档\%2820130116%29温州市壹百旅行社管理软件二次开发技术服务合同（1月15日）.doc" />
+    <None Include="策划文档\%2820130121%29发票系统问题%29.doc" />
+    <None Include="策划文档\%28201301280001%29二次开发技术服务合同（1月27日）说明.doc" />
+    <None Include="策划文档\201302190001.doc" />
+    <None Include="策划文档\yibai-软件事情-反馈201212310001.doc" />
+    <None Include="策划文档\%28201308050001%29yibai.20130710.0001（技术评估）.doc" />
+  </ItemGroup>
+  <ItemGroup>
+    <Folder Include="打印单据\" />
+  </ItemGroup>
+  <Import Project="$(MSBuildToolsPath)\Microsoft.CSharp.targets" />
+  <!-- To modify your build process, add your task inside one of the targets below and uncomment it. 
+       Other similar extension points exist, see Microsoft.Common.targets.
+  <Target Name="BeforeBuild">
+  </Target>
+  <Target Name="AfterBuild">
+  </Target>
+  -->
+</Project>

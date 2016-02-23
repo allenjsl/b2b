@@ -1,0 +1,15 @@
+﻿
+目录说明：
+~/MP：存放.Master文件
+~/UWC：存放.ascx文件
+~/ashx：存放.ashx文件
+~/HuiYuan:存放同行后台文件
+
+页面基类：
+QianTaiYeMian：前台页面基类
+HuiYuanYeMian：同行用户登录后窗口基类
+
+同行用户登录处理程序：
+EyouSoft.Security.Membership.TongHangYongHuProvider
+
+

@@ -1,0 +1,31 @@
+﻿<%@ Master Language="C#" AutoEventWireup="true" CodeBehind="Boxy.master.cs" Inherits="Web.MasterPage.Boxy" %>
+
+<!DOCTYPE html PUBLIC "-//W3C//DTD XHTML 1.0 Transitional//EN" "http://www.w3.org/TR/xhtml1/DTD/xhtml1-transitional.dtd">
+<html xmlns="http://www.w3.org/1999/xhtml">
+<head id="Head1" runat="server">
+    <title>旅行社管理系统-BOXY</title>
+    <script type="text/javascript" src="/js/jquery-1.4.4.js"></script>
+    <script type="text/javascript" src="/js/datepicker/wdatepicker.js"></script>
+    <script type="text/javascript" src="/js/validatorform.js"></script>
+    <script type="text/javascript" src="/js/table-toolbar.js?_v=201503170001"></script>
+    <script type="text/javascript" src="/js/jquery.blockUI.js"></script>
+    <script type="text/javascript" src="/js/swfupload/swfupload.js"></script>
+    <script type="text/javascript" src="/js/utilsUri.js"></script>
+    <script type="text/javascript" src="/js/bt.min.js"></script>
+    <link href="/css/sytle.css" rel="stylesheet" type="text/css" />
+    <link href="/css/swfupload/default.css" rel="stylesheet" type="text/css" />
+    <!--[if lt IE 7]>
+    <script type="text/javascript" src="/js/json2.js"></script>
+    <![endif]-->
+    <asp:ContentPlaceHolder ID="PageHead" runat="server">
+    </asp:ContentPlaceHolder>
+</head>
+<body>
+    <asp:ContentPlaceHolder ID="PageBody" runat="server">
+    </asp:ContentPlaceHolder>
+    
+    <script type="text/javascript">
+        $(document).ready(function() { if (typeof JSON == 'undefined') $.getScript("/js/json2.js", function() { }); });
+    </script>
+</body>
+</html>

@@ -1,0 +1,123 @@
+﻿<!DOCTYPE html PUBLIC "-//W3C//DTD XHTML 1.0 Transitional//EN" "http://www.w3.org/TR/xhtml1/DTD/xhtml1-transitional.dtd">
+<html xmlns="http://www.w3.org/1999/xhtml" >
+<head>
+    <title></title>
+    
+
+    <script type="text/javascript" src="/js/jquery-1.4.4.js"></script>
+
+    <script type="text/javascript" src="/js/jquery.boxy.js"></script>
+
+    <script type="text/javascript" src="/js/datepicker/wdatepicker.js"></script>
+
+    <script type="text/javascript" src="/js/bt.min.js"></script>
+
+    <!--[if IE]><script src="/js/excanvas.js" type="text/javascript" charset="utf-8"></script><![endif]-->
+    <!--[if lt IE 7]>
+        <script type="text/javascript" src="/js/unitpngfix.js"></script>
+    <![endif]-->
+
+    <script type="text/javascript" src="/js/moveScroll.js"></script>
+
+    <script type="text/javascript" src="/js/jquery.blockUI.js"></script>
+
+    <script type="text/javascript" src="/js/table-toolbar.js?_v=201302010001"></script>
+
+    <script type="text/javascript" src="/js/newjquery.autocomplete.js"></script>
+
+    <script type="text/javascript" src="/js/validatorform.js"></script>
+
+    <script type="text/javascript" src="/js/swfupload/swfupload.js"></script>
+
+    <script type="text/javascript" src="/js/utilsuri.js"></script>
+</head>
+<body>
+
+    <div style="margin: 0px 10px;" data-class="Route_upload_swfbox"><input type="hidden" data-class="Route_upload" data-id="hide_Route_file" name="hide_Route_file" /><span
+            data-class="Route_upload" data-id="spanButtonPlaceholder"></span></div>
+    <div style="margin: 0px 10px;" data-class="Route_upload_swfbox"><input type="hidden" data-class="Route_upload" data-id="hide_Route_file" name="hide_Route_file" /><span
+            data-class="Route_upload" data-id="spanButtonPlaceholder"></span></div>
+    <div style="margin: 0px 10px;" data-class="Route_upload_swfbox"><input type="hidden" data-class="Route_upload" data-id="hide_Route_file" name="hide_Route_file" /><span
+            data-class="Route_upload" data-id="spanButtonPlaceholder"></span></div>
+    <div style="margin: 0px 10px;" data-class="Route_upload_swfbox"><input type="hidden" data-class="Route_upload" data-id="hide_Route_file" name="hide_Route_file" /><span
+            data-class="Route_upload" data-id="spanButtonPlaceholder"></span></div>
+<div style="margin: 0px 10px;" data-class="Route_upload_swfbox"><input type="hidden" data-class="Route_upload" data-id="hide_Route_file" name="hide_Route_file" /><span
+        data-class="Route_upload" data-id="spanButtonPlaceholder"></span></div>
+    <div style="margin: 0px 10px;" data-class="Route_upload_swfbox"><input type="hidden" data-class="Route_upload" data-id="hide_Route_file" name="hide_Route_file" /><span
+            data-class="Route_upload" data-id="spanButtonPlaceholder"></span></div>
+    <div style="margin: 0px 10px;" data-class="Route_upload_swfbox"><input type="hidden" data-class="Route_upload" data-id="hide_Route_file" name="hide_Route_file" /><span
+            data-class="Route_upload" data-id="spanButtonPlaceholder"></span></div>
+    <div style="margin: 0px 10px;" data-class="Route_upload_swfbox"><input type="hidden" data-class="Route_upload" data-id="hide_Route_file" name="hide_Route_file" /><span
+            data-class="Route_upload" data-id="spanButtonPlaceholder"></span></div><div style="margin: 0px 10px;" data-class="Route_upload_swfbox"><input type="hidden" data-class="Route_upload" data-id="hide_Route_file" name="hide_Route_file" /><span
+            data-class="Route_upload" data-id="spanButtonPlaceholder"></span></div><div style="margin: 0px 10px;" data-class="Route_upload_swfbox"><input type="hidden" data-class="Route_upload" data-id="hide_Route_file" name="hide_Route_file" /><span
+            data-class="Route_upload" data-id="spanButtonPlaceholder"></span></div><div style="margin: 0px 10px;" data-class="Route_upload_swfbox"><input type="hidden" data-class="Route_upload" data-id="hide_Route_file" name="hide_Route_file" /><span
+            data-class="Route_upload" data-id="spanButtonPlaceholder"></span></div><div style="margin: 0px 10px;" data-class="Route_upload_swfbox"><input type="hidden" data-class="Route_upload" data-id="hide_Route_file" name="hide_Route_file" /><span
+            data-class="Route_upload" data-id="spanButtonPlaceholder"></span></div>
+    <script type="text/javascript" charset="utf-8" src="/ueditor1_4_3/ueditor.config.js"></script>
+    <script type="text/javascript" charset="utf-8" src="/ueditor1_4_3/ueditor.all.js"></script>
+<script type="text/javascript">
+
+    function CreateFlashUpload(flashUpload, idNo) {
+        flashUpload = new SWFUpload({
+            upload_url: "/CommonPage/upload.aspx",
+            file_post_name: "Filedata",
+            post_params: {
+                "ASPSESSID": ""
+            },
+
+            file_size_limit: "2 MB",
+            file_types: "*.bmp;*.jpg;*.gif;*.jpeg;*.png;",
+            file_types_description: "附件上传",
+            file_upload_limit: 100,
+            swfupload_loaded_handler: function() { },
+            file_dialog_start_handler: uploadStart,
+            upload_start_handler: uploadStart,
+            file_queued_handler: fileQueued,
+            file_queue_error_handler: fileQueueError,
+            file_dialog_complete_handler: fileDialogComplete,
+            upload_progress_handler: uploadProgress,
+            upload_error_handler: uploadError,
+            upload_success_handler: uploadSuccess,
+            upload_complete_handler: uploadComplete,
+
+            // Button settings
+            button_placeholder_id: "spanButtonPlaceholder_" + idNo,
+            button_image_url: "/images/swfupload/XPButtonNoText_92_24.gif",
+            button_width: 92,
+            button_height: 24,
+            button_text: '<span ></span>',
+            button_text_style: '.button { font-family: Helvetica, Arial, sans-serif; font-size: 14pt; } .buttonSmall { font-size: 10pt; }',
+            button_text_top_padding: 1,
+            button_text_left_padding: 5,
+            button_cursor: SWFUpload.CURSOR.HAND,
+            flash_url: "/js/swfupload/swfupload.swf",
+            custom_settings: {
+                upload_target: "divFileProgressContainer_" + idNo,
+                HidFileNameId: "hide_Route_file_" + idNo,
+                HidFileName: "hide_Route_file_Old",
+                ErrMsgId: "errMsg_" + idNo,
+                UploadSucessCallback: function() { RouteEdit.UploadOverCallBack(idNo); }
+            },
+            debug: false,
+            minimum_flash_version: "9.0.28",
+            swfupload_pre_load_handler: swfUploadPreLoad,
+            swfupload_load_failed_handler: swfUploadLoadFailed
+        });
+    }
+    
+    
+    $("div[data-class='Route_upload_swfbox']").each(function() {
+        var idNo = parseInt(Math.random() * 100000);
+
+        $(this).find("[data-class='Route_upload']").each(function() {
+            if ($(this).attr("id") == "") {
+                $(this).attr("id", $(this).attr("data-id") + "_" + idNo);
+            }
+        })
+        var swf = null;
+        CreateFlashUpload(swf, idNo);
+        
+    })
+</script>
+</body>
+</html>

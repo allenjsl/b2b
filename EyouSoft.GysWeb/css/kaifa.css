@@ -1,0 +1,46 @@
+﻿
+.table_tr_item{}
+.table_tr_item:hover{background:#EDF5FA;}
+
+.input1, .textarea1, .select1 {background: none repeat scroll 0 0 #fff;border: 1px solid #ccc;border-radius: 3px;box-shadow: 0 2px 5px 0 rgba(0, 0, 0, 0.07) inset;    color: #666;    font-family: "Microsoft Yahei";font-size: 12px;height: 26px;line-height: 26px;padding: 0 3px;}
+.input1:focus {border-color: #a2cbf5;box-shadow: 0 0 8px 0 rgba(0, 102, 204, 0.3);}
+
+.input_readonly { background:#e0e0e0;}
+
+.td_yuding_biaoti{text-align: right; background: #f2f2f2;}
+.yuding_chanpinbianma{font-size:12px; font-weight:normal; color:#ff0000;}
+.yuding_jifen{font-size:12px; font-weight:normal; color:blue;}
+.yuding_jine {color:#f80; font-weight:bold;padding-left:2px;padding-right:2px;}
+.yuding_jifen1{font-size:12px; font-weight:normal; color:#ff0000;}
+
+.td_jifenxx_biaoti{text-align: right; background: #f2f2f2;}
+
+.uploadify_gongsi_logo_xianshi{display:none;clear:both;display: none;line-height:20px; background-color: #f5f5f5;border: 2px solid #e5e5e5; font: 12px Verdana, Geneva, sans-serif; margin-top:5px; margin-bottom:5px; overflow:hidden;width:650px;}
+.uploadify_gongsi_logo_xianshi ul{list-style-type:none;width:100%;margin:0;padding:0;}
+.uploadify_gongsi_logo_xianshi ul li{list-style-type:none; float:left;width:33%;border: 1px solid #D3D3D3; border-radius: 5px;margin:0;padding:0; height:111px;width:289px; margin-right:2px; margin-top:2px; margin-left:2px;margin-bottom:2px;}
+.uploadify_gongsi_logo_xianshi ul li img{width:263px; height:91px;}
+.uploadify_gongsi_logo_xianshi .uploadify_suoluetu {width:263px; height:91px; margin:0px auto; margin-left:11px; margin-top:10px; overflow:hidden; position:relative;}
+.uploadify_gongsi_logo_xianshi .uploadify_filename{background: none repeat scroll 0 0 rgba(0, 0, 0, 0.6) !important; bottom:0; left:0; position:absolute;width:100%; font-size:14px;font-size: 16px;font-style: normal;font-weight: 400;line-height: 28px;max-height: 56px;overflow: hidden;word-break: break-all;word-wrap: break-word; color:#fff; text-align:center;}
+.uploadify_gongsi_logo_xianshi .uploadify_suoluetu .uploadify_mask{background: none repeat scroll 0 0 rgba(229, 229, 229, 0.85) !important;display:none ;height: 100%;left: 0;position: absolute;text-align: center;top: 0;width: 100%;font-size:14px; font-weight:400; line-height:91px;}
+.uploadify_gongsi_logo_xianshi .uploadify_suoluetu:hover .uploadify_mask{ display:block;}
+
+.uploadify_danjudayinmoban_xianshi{display:none;clear:both;display: none;line-height:20px; background-color: #f5f5f5;border: 2px solid #e5e5e5; font: 12px Verdana, Geneva, sans-serif; margin-top:5px; margin-bottom:5px; overflow:hidden;width:650px;}
+.uploadify_danjudayinmoban_xianshi ul{list-style-type:none;width:100%;margin:0;padding:0;}
+.uploadify_danjudayinmoban_xianshi ul li{list-style-type:none; float:left;width:33%;border: 1px solid #D3D3D3; border-radius: 5px;margin:0;padding:0; height:121px;width:120px; margin-right:2px; margin-top:2px; margin-left:2px;margin-bottom:2px;}
+.uploadify_danjudayinmoban_xianshi ul li img{width:100px; height:100px;}
+.uploadify_danjudayinmoban_xianshi .uploadify_suoluetu {width:100px; height:100px; margin:0px auto; margin-left:11px; margin-top:10px; overflow:hidden; position:relative;}
+.uploadify_danjudayinmoban_xianshi .uploadify_filename{background: none repeat scroll 0 0 rgba(0, 0, 0, 0.6) !important; bottom:0; left:0; position:absolute;width:100%; font-size:14px;font-size: 16px;font-style: normal;font-weight: 400;line-height: 28px;max-height: 56px;overflow: hidden;word-break: break-all;word-wrap: break-word; color:#fff; text-align:center;}
+.uploadify_danjudayinmoban_xianshi .uploadify_suoluetu .uploadify_mask{background: none repeat scroll 0 0 rgba(229, 229, 229, 0.85) !important;display:none ;height: 100%;left: 0;position: absolute;text-align: center;top: 0;width: 100%;font-size:14px; font-weight:400; line-height:91px;}
+.uploadify_danjudayinmoban_xianshi .uploadify_suoluetu:hover .uploadify_mask{ display:block;}
+
+.zx_none_tishi{width:100%;height:75px;line-height:75px; text-align:center; background:#f8f8f8; border:#ddd solid 1px; color:#fe8700;font-size:16px;font-family:"Microsoft Yahei"; margin-bottom:10px;}
+
+.zz_bg {background-color:Gray;  left:0px;  opacity:0.5;  position:absolute;  top:0px;  z-index:3;  filter:alpha(opacity=50); -moz-opacity:0.5; -khtml-opacity:0.5;z-index:100 }  
+.zz_dhk {display:none;position:fixed !important;position:absolute;width:100%; height:100%; left:0; top:0;z-index:101;}  
+
+.baojiaxiazai_boxy {background: none repeat scroll 0 0 #fff;border: 6px solid #767576;left: 50%;top: 50%;position: absolute;box-shadow: 5px 5px 10px #999;height:270px;margin:-155px 0 0 -350px;padding-top: 40px;width:688px;z-index:101;overflow:auto;}
+.baojiaxiazai_boxy a.close_btn {color: #25c5ca;font-size: 18px;font-weight: normal;position: absolute;right: 10px;top: 10px;}
+.baojiaxiazai_boxy a.close_btn em {color: #25c5ca;padding-right: 5px;}
+
+.xianlu_jiage_a {color:#2f2f2f;}
+.xianlu_jiage_a:hover {color:#2f2f2f; text-decoration:underline;}

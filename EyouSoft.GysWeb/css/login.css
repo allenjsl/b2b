@@ -1,0 +1,29 @@
+@charset "utf-8";
+/* CSS Document */
+body {background:#FFFFFF;font-family:"宋体","Arial Narrow";font-size:12px;line-height:22px;margin:0;padding:0;}
+.clearboth{ clear:both; margin:0; padding:0; line-height:1; font-size:1;}
+.hr_10{ height:10px; font-size:1; line-height:1;}
+h1,h2,h3,h4,h5,h6{ font-style:normal; font-weight:normal; margin:0; padding:0;}
+ul,li,ol{ list-style:none; margin:0; padding:0;}
+p,span,div{ margin:0; padding:0;}
+img{ border:none; vertical-align:middle; margin:0; padding:0;}
+a{text-decoration:none; /*color:#005aff;*/ color:#1351A0;}
+a:hover{text-decoration: underline; color:#FF6600;}
+#wrapper{ width:100%; background:url(../images/topbg.gif) repeat-x 0 0;}
+.mid {margin:0 auto;}
+input,textarea{ font-size:12px; color:#000000;}
+/******2010-12-24 修改*******/
+/*****************top start********************/
+.top{ height:97px;  background:url(../images/topbannerbg.gif) no-repeat 0 0; color:#FFFFFF; position:relative;width:auto;}
+.login_logo{ position:relative;}
+.login_logo img{ position:absolute; left:20px; top:10px; width:466px; height:76px;}
+.topleft{ position:absolute; left:20px; top:15px;}
+.topleft img{width:466px; height:76px;}
+/*.topright{position:relative; margin-right:1px;_top:70px;} 
+.topright ul{padding-top:65px;}*//***********2010-12-29 修改*************/
+.topright{ float:right;margin-right:10px;margin-top:40px;}
+.topright li{ display:inline; float:left; margin:5px 10px;}
+/*.topright li{ display:inline; padding:0 10px;}*/
+.topright li a{ color:#FFFFFF;}
+/*****************top end*******************/
+.datetimesbox{ color:#FFFFFF;}

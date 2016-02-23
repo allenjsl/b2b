@@ -1,0 +1,83 @@
+﻿<?xml version="1.0" encoding="utf-8" ?>
+<!--DAL对象映射-->
+<configuration>
+
+    <configSections>
+        <section name="unity" type="Microsoft.Practices.Unity.Configuration.UnityConfigurationSection, Microsoft.Practices.Unity.Configuration" />
+    </configSections>
+
+    <unity>
+        <typeAliases>
+            <typeAlias alias="singleton" type="Microsoft.Practices.Unity.ContainerControlledLifetimeManager, Microsoft.Practices.Unity" />
+            <typeAlias alias="ISysHandleLogs" type="EyouSoft.IDAL.CompanyStructure.ISysHandleLogs, EyouSoft.IDAL" />
+            <typeAlias alias="DSysHandleLogs" type="EyouSoft.DAL.CompanyStructure.SysHandleLogs, EyouSoft.DAL" />
+            <typeAlias alias="ICity" type="EyouSoft.IDAL.CompanyStructure.ICity, EyouSoft.IDAL" />
+            <typeAlias alias="DCity" type="EyouSoft.DAL.CompanyStructure.City, EyouSoft.DAL" />
+            <typeAlias alias="ICompanyUser" type="EyouSoft.IDAL.CompanyStructure.ICompanyUser, EyouSoft.IDAL" />
+            <typeAlias alias="DCompanyUser" type="EyouSoft.DAL.CompanyStructure.CompanyUser, EyouSoft.DAL" />
+            <typeAlias alias="ICompanySupplier" type="EyouSoft.IDAL.CompanyStructure.ICompanySupplier, EyouSoft.IDAL" />
+            <typeAlias alias="DCompanySupplier" type="EyouSoft.DAL.CompanyStructure.CompanySupplier, EyouSoft.DAL" />
+            <typeAlias alias="IGysZhuTi" type="EyouSoft.IDAL.GysStructure.IGysZhuTi, EyouSoft.IDAL" />
+            <typeAlias alias="DGysZhuTi" type="EyouSoft.DAL.GysStructure.DGysZhuTi, EyouSoft.DAL" />
+
+            <!--线路产品-->
+            <typeAlias alias="IRoute" type="EyouSoft.IDAL.TourStructure.IRoute, EyouSoft.IDAL" />
+            <typeAlias alias="DRoute" type="EyouSoft.DAL.TourStructure.DRoute, EyouSoft.DAL" />
+
+            <!--订单-->
+            <typeAlias alias="ITourOrder" type="EyouSoft.IDAL.TourStructure.ITourOrder, EyouSoft.IDAL" />
+            <typeAlias alias="DTourOrder" type="EyouSoft.DAL.TourStructure.DTourOrder, EyouSoft.DAL" />
+
+            <!--地接-->
+            <typeAlias alias="IPlanDiJie" type="EyouSoft.IDAL.PlanStructure.IPlanDiJie, EyouSoft.IDAL" />
+            <typeAlias alias="DPlanDiJie" type="EyouSoft.DAL.PlanStructure.DPlanDiJie, EyouSoft.DAL" />
+
+            <!--控位-->
+            <typeAlias alias="IKongWei" type="EyouSoft.IDAL.TourStructure.ITour, EyouSoft.IDAL" />
+            <typeAlias alias="DKongWei" type="EyouSoft.DAL.TourStructure.DTour, EyouSoft.DAL" />
+
+        </typeAliases>
+        <containers>
+            <container>
+                <types>
+                    <type type="ISysHandleLogs" mapTo="DSysHandleLogs" name="">
+                        <lifetime type="singleton" />
+                    </type>
+                    <type type="ICity" mapTo="DCity" name="">
+                        <lifetime type="singleton" />
+                    </type>                    
+                    <type type="ICompanyUser" mapTo="DCompanyUser" name="">
+                        <lifetime type="singleton" />
+                    </type>
+                    <type type="ICompanySupplier" mapTo="DCompanySupplier" name="">
+                        <lifetime type="singleton" />
+                    </type>
+                    <type type="IGysZhuTi" mapTo="DGysZhuTi" name="">
+                        <lifetime type="singleton" />
+                    </type>
+
+                    <!--线路产品-->
+                    <type type="IRoute" mapTo="DRoute" name="">
+                        <lifetime type="singleton" />
+                    </type>
+
+                    <!--订单-->
+                    <type type="ITourOrder" mapTo="DTourOrder" name="">
+                        <lifetime type="singleton" />
+                    </type>
+
+                    <!--地接-->
+                    <type type="IPlanDiJie" mapTo="DPlanDiJie" name="">
+                        <lifetime type="singleton" />
+                    </type>
+
+                    <!--控位-->
+                    <type type="IKongWei" mapTo="DKongWei" name="">
+                        <lifetime type="singleton" />
+                    </type>
+                    
+                </types>
+            </container>
+        </containers>
+    </unity>
+</configuration>

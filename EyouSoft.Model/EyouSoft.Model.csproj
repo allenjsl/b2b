@@ -1,0 +1,162 @@
+﻿<?xml version="1.0" encoding="utf-8"?>
+<Project ToolsVersion="3.5" DefaultTargets="Build" xmlns="http://schemas.microsoft.com/developer/msbuild/2003">
+  <PropertyGroup>
+    <Configuration Condition=" '$(Configuration)' == '' ">Debug</Configuration>
+    <Platform Condition=" '$(Platform)' == '' ">AnyCPU</Platform>
+    <ProductVersion>9.0.30729</ProductVersion>
+    <SchemaVersion>2.0</SchemaVersion>
+    <ProjectGuid>{E514E743-7EFC-4CAF-8249-4E72C97109E8}</ProjectGuid>
+    <OutputType>Library</OutputType>
+    <AppDesignerFolder>Properties</AppDesignerFolder>
+    <RootNamespace>EyouSoft.Model</RootNamespace>
+    <AssemblyName>EyouSoft.Model</AssemblyName>
+    <TargetFrameworkVersion>v3.5</TargetFrameworkVersion>
+    <FileAlignment>512</FileAlignment>
+    <SccProjectName>SAK</SccProjectName>
+    <SccLocalPath>SAK</SccLocalPath>
+    <SccAuxPath>SAK</SccAuxPath>
+    <SccProvider>SAK</SccProvider>
+  </PropertyGroup>
+  <PropertyGroup Condition=" '$(Configuration)|$(Platform)' == 'Debug|AnyCPU' ">
+    <DebugSymbols>true</DebugSymbols>
+    <DebugType>full</DebugType>
+    <Optimize>false</Optimize>
+    <OutputPath>bin\Debug\</OutputPath>
+    <DefineConstants>DEBUG;TRACE</DefineConstants>
+    <ErrorReport>prompt</ErrorReport>
+    <WarningLevel>4</WarningLevel>
+  </PropertyGroup>
+  <PropertyGroup Condition=" '$(Configuration)|$(Platform)' == 'Release|AnyCPU' ">
+    <DebugType>pdbonly</DebugType>
+    <Optimize>true</Optimize>
+    <OutputPath>bin\Release\</OutputPath>
+    <DefineConstants>TRACE</DefineConstants>
+    <ErrorReport>prompt</ErrorReport>
+    <WarningLevel>4</WarningLevel>
+  </PropertyGroup>
+  <ItemGroup>
+    <Reference Include="System" />
+    <Reference Include="System.Core">
+      <RequiredTargetFramework>3.5</RequiredTargetFramework>
+    </Reference>
+    <Reference Include="System.Xml.Linq">
+      <RequiredTargetFramework>3.5</RequiredTargetFramework>
+    </Reference>
+    <Reference Include="System.Data.DataSetExtensions">
+      <RequiredTargetFramework>3.5</RequiredTargetFramework>
+    </Reference>
+    <Reference Include="System.Data" />
+    <Reference Include="System.Xml" />
+  </ItemGroup>
+  <ItemGroup>
+    <Compile Include="AdminCenterStructure\AttendanceInfo.cs" />
+    <Compile Include="AdminCenterStructure\ContractInfo.cs" />
+    <Compile Include="AdminCenterStructure\DutyManager.cs" />
+    <Compile Include="AdminCenterStructure\FixedAsset.cs" />
+    <Compile Include="AdminCenterStructure\MeetingInfo.cs" />
+    <Compile Include="AdminCenterStructure\PersonalHistory.cs" />
+    <Compile Include="AdminCenterStructure\PersonnelInfo.cs" />
+    <Compile Include="AdminCenterStructure\RuleInfo.cs" />
+    <Compile Include="AdminCenterStructure\SchoolInfo.cs" />
+    <Compile Include="AdminCenterStructure\TrainPlan.cs" />
+    <Compile Include="AdminCenterStructure\TrainPlanAccepts.cs" />
+    <Compile Include="CompanyStructure\Area.cs" />
+    <Compile Include="CompanyStructure\City.cs" />
+    <Compile Include="CompanyStructure\CompanyAccount.cs" />
+    <Compile Include="CompanyStructure\CompanyInfo.cs" />
+    <Compile Include="CompanyStructure\CompanySetting.cs" />
+    <Compile Include="CompanyStructure\CompanySupplier.cs" />
+    <Compile Include="CompanyStructure\CompanyTraffic.cs" />
+    <Compile Include="CompanyStructure\CompanyUser.cs" />
+    <Compile Include="CompanyStructure\CustomerInfo.cs" />
+    <Compile Include="CompanyStructure\Department.cs" />
+    <Compile Include="CompanyStructure\MJiChuXinXiInfo.cs" />
+    <Compile Include="CompanyStructure\MXiaoXiInfo.cs" />
+    <Compile Include="CompanyStructure\News.cs" />
+    <Compile Include="CompanyStructure\Province.cs" />
+    <Compile Include="CompanyStructure\MShengFenChengShiInfo.cs" />
+    <Compile Include="CompanyStructure\SysHandleLogs.cs" />
+    <Compile Include="CompanyStructure\SysHandleLogsNO.cs" />
+    <Compile Include="CompanyStructure\SysLoginLog.cs" />
+    <Compile Include="CompanyStructure\SysRoleManage.cs" />
+    <Compile Include="EnumType\AdminCenterStructure.cs" />
+    <Compile Include="EnumType\CompanyStructure.cs" />
+    <Compile Include="EnumType\FinStructure.cs" />
+    <Compile Include="EnumType\PersonalCenterStructure.cs" />
+    <Compile Include="EnumType\PrivsStructure.cs" />
+    <Compile Include="EnumType\PtStructure.cs" />
+    <Compile Include="EnumType\SysStructure.cs" />
+    <Compile Include="EnumType\TourStructure.cs" />
+    <Compile Include="FinStructure\MChuNaDengZhang.cs" />
+    <Compile Include="FinStructure\MBaoXiaoInfo.cs" />
+    <Compile Include="FinStructure\MFaPiaoInfo.cs" />
+    <Compile Include="FinStructure\MFinInfo.cs" />
+    <Compile Include="FinStructure\MFuKuanInfo.cs" />
+    <Compile Include="FinStructure\MGongZiInfo.cs" />
+    <Compile Include="FinStructure\MHuiFangInfo.cs" />
+    <Compile Include="FinStructure\MJieKuanInfo.cs" />
+    <Compile Include="FinStructure\MLiRunInfo.cs" />
+    <Compile Include="FinStructure\MQiTaShouRuInfo.cs" />
+    <Compile Include="FinStructure\MQiTaZhiChuInfo.cs" />
+    <Compile Include="FinStructure\MRiJiZhangInfo.cs" />
+    <Compile Include="FinStructure\MShouKuanInfo.cs" />
+    <Compile Include="FinStructure\MYinHangHeDuiInfo.cs" />
+    <Compile Include="FinStructure\MZiChanFuZhaiInfo.cs" />
+    <Compile Include="GysStructure\MGysZhuTiInfo.cs" />
+    <Compile Include="PersonalCenterStructure\PersonDocument.cs" />
+    <Compile Include="PersonalCenterStructure\TranRemind.cs" />
+    <Compile Include="PersonalCenterStructure\UserLeave.cs" />
+    <Compile Include="PersonalCenterStructure\UserMemorandum.cs" />
+    <Compile Include="PersonalCenterStructure\WorkExchange.cs" />
+    <Compile Include="PersonalCenterStructure\WorkPlan.cs" />
+    <Compile Include="PersonalCenterStructure\WorkReport.cs" />
+    <Compile Include="PlanStructure\MPlanDiJie.cs" />
+    <Compile Include="PlanStructure\MPlanChuPiao.cs" />
+    <Compile Include="PlanStructure\MPlanTuiPiao.cs" />
+    <Compile Include="Properties\AssemblyInfo.cs" />
+    <Compile Include="PtStructure\MBaoJiaInfo.cs" />
+    <Compile Include="PtStructure\MCuXiaoInfo.cs" />
+    <Compile Include="PtStructure\MGuangGaoInfo.cs" />
+    <Compile Include="PtStructure\MJiFenInfo.cs" />
+    <Compile Include="PtStructure\MJingDianInfo.cs" />
+    <Compile Include="PtStructure\MJiuDianInfo.cs" />
+    <Compile Include="PtStructure\MPtInfo.cs" />
+    <Compile Include="PtStructure\MTongJiInfo.cs" />
+    <Compile Include="PtStructure\MTuiJianInfo.cs" />
+    <Compile Include="PtStructure\MKongWeiXianLuInfo.cs" />
+    <Compile Include="PtStructure\MYanZhengMaInfo.cs" />
+    <Compile Include="PtStructure\MYuMingInfo.cs" />
+    <Compile Include="PtStructure\MZhuanXianShangInfo.cs" />
+    <Compile Include="PtStructure\MZxsPrivsMoBanInfo.cs" />
+    <Compile Include="PtStructure\MZiXunInfo.cs" />
+    <Compile Include="SSOStructure\MGysYongHuInfo.cs" />
+    <Compile Include="SSOStructure\MTongHangYongHuInfo.cs" />
+    <Compile Include="SSOStructure\MUserInfo.cs" />
+    <Compile Include="SSOStructure\MWebmasterInfo.cs" />
+    <Compile Include="SysStructure\MSysInfo.cs" />
+    <Compile Include="SysStructure\SysDomain.cs" />
+    <Compile Include="TongJiStructure\MCaoZuoRenInfo.cs" />
+    <Compile Include="TongJiStructure\MJiFenInfo.cs" />
+    <Compile Include="TongJiStructure\MLiRunGuSuanBiao1Info.cs" />
+    <Compile Include="TongJiStructure\MLxsRenTouInfo.cs" />
+    <Compile Include="TourStructure\MBianGeng.cs" />
+    <Compile Include="TourStructure\MRoute.cs" />
+    <Compile Include="TourStructure\MTour.cs" />
+    <Compile Include="TourStructure\MTourOrder.cs" />
+    <Compile Include="TourStructure\MTourOrderHotel.cs" />
+  </ItemGroup>
+  <ItemGroup>
+    <ProjectReference Include="..\EyouSoft.Toolkit\EyouSoft.Toolkit.csproj">
+      <Project>{99A84C7E-8F77-45C7-865E-C84478BC1EDC}</Project>
+      <Name>EyouSoft.Toolkit</Name>
+    </ProjectReference>
+  </ItemGroup>
+  <Import Project="$(MSBuildToolsPath)\Microsoft.CSharp.targets" />
+  <!-- To modify your build process, add your task inside one of the targets below and uncomment it. 
+       Other similar extension points exist, see Microsoft.Common.targets.
+  <Target Name="BeforeBuild">
+  </Target>
+  <Target Name="AfterBuild">
+  </Target>
+  -->
+</Project>

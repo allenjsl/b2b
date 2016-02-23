@@ -1,0 +1,17 @@
+﻿@charset "utf-8";
+/* CSS Document */
+body{ background:#fff; font-size:13px; font-family:Verdana, Geneva, sans-serif,宋体; margin:5px auto; color:#000;}
+a{ text-decoration:none; cursor:pointer;}
+table{ border-collapse:collapse; margin-top:5px;}
+.font24{ font-size:24px;}
+.toptable td{ border:#676564 solid 1px; padding-left:3px; font-size:14px; /*line-height:26px;*/}
+.list th{ padding:3px; background:#c5e6f9; font-size:14px; font-weight:bold;}
+.list th,.list td{ /*line-height:26px;*/border:#676564 solid 1px;padding-left:3px;}
+/*去掉表格线*/
+.list1 th{ padding:3px; background:#c5e6f9; font-size:14px; font-weight:bold;}
+.list1 th,.list1 td{ /*line-height:26px;*/padding-left:3px;}
+#divContent table{width:696px;}
+p{padding:0px; margin:0px;}
+
+.p_title {font-family: "Microsoft Yahei";font-size: 24px;}
+.djtt_logo{width:263px; height:91px;}

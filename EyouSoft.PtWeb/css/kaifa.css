@@ -1,0 +1,33 @@
+﻿body{}
+
+.errmsg{ background:url(../images/error.gif) no-repeat left center; padding-left:22px; color:#f01818; margin-left:10px; display:none;}
+
+.zz_bg {background-color:Gray;  left:0px;  opacity:0.5;  position:absolute;  top:0px;  z-index:3;  filter:alpha(opacity=50); -moz-opacity:0.5; -khtml-opacity:0.5;z-index:100 }  
+.zz_dhk {display:none;position:fixed !important;position:absolute;width:100%; height:100%; left:0; top:0;z-index:101;}  
+
+.jiudianfangxing_boxy {background: none repeat scroll 0 0 #fff;border: 6px solid #767576;left: 50%;top: 50%;position: absolute;box-shadow: 5px 5px 10px #999;height:370px;margin:-205px 0 0 -500px;padding-top: 40px;width:988px;z-index:101;}
+.jiudianfangxing_boxy a.close_btn {color: #25c5ca;font-size: 18px;font-weight: normal;position: absolute;right: 10px;top: 10px;}
+.jiudianfangxing_boxy a.close_btn em {color: #25c5ca;padding-right: 5px;}
+
+.jiudianfangxing_focusbox{position:relative;overflow:hidden;zoom:1;}
+#jiudianfangxing_fullbanner{width:770px;height:330px;margin:auto;position:relative;}
+#jiudianfangxing_fullbanner li a{display:block;width:760px;height:320px;overflow:hidden;}
+#jiudianfangxing_fullbanner img{width:760px;height:320px;}
+#jiudianfangxing_fullbanner ul{width:770px;height:330px;}
+#jiudianfangxing_fullbanner .wrappic{overflow:visible;position:absolute;}
+#jiudianfangxing_fullbanner .next, #jiudianfangxing_fullbanner .prev{filter:alpha(Opacity=70);opacity:.7;position:absolute;top:50%;margin-top:-25px;margin-left:5px;background-color:#303030;z-index:3;}
+#jiudianfangxing_fullbanner .next:hover, #jiudianfangxing_fullbanner .prev:hover{background-color:orangered;}
+#jiudianfangxing_fullbanner .next{margin:-25px 5px 0 0;right:0;}
+#jiudianfangxing_fullbanner .mask-left, #jiudianfangxing_fullbanner .mask-right, #jiudianfangxing_fullbanner .plan{background:#fff;padding:5px;z-index:1;position:absolute;top:0;left:0;width:760px;height:320px;overflow:hidden;left:1540px;}
+#jiudianfangxing_fullbanner .mask-right, #jiudianfangxing_fullbanner .mask-left{z-index:4;left:-770px;filter:alpha(Opacity=50);opacity:.5;background:#fff;overflow:hidden;}
+#jiudianfangxing_fullbanner .mask-right{left:770px;}
+
+.arrow-left,.arrow-right{background:url(../images/jdfx_tupian_icon.png) no-repeat;}
+.arrow-left{background-position:15px 12px;height:50px;width:50px;}
+.arrow-left:hover{background-position:-45px 12px;}
+.arrow-right{background-position:-103px 12px;height:50px;width:50px;}
+.arrow-right:hover{background-position:-163px 12px;}
+
+.sj_leftimg{width:212px; border:#ddd solid 1px;}
+
+.line_side02,.line_side03,.line_side04{ font-size:14px;}
